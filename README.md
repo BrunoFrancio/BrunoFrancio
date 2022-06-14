@@ -1,4 +1,4 @@
-🖐  Olá, me chamo Bruno Francio. 
+🖐  Olá, me chamo Bruno Francio. <br>
 📘 Estudante de Análise e desenvolvimento de sistemas 
 
 
