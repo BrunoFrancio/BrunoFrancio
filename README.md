@@ -1,37 +1,92 @@
 # 👋 Olá! Eu sou o Bruno Francio
 
-👨‍💻 **Desenvolvedor apaixonado por soluções simples para problemas complexos**. 
-Entusiasta de métodos ágeis, ambientes flexíveis e entrega contínua.
+Desenvolvedor Full-Stack focado em criar soluções simples para problemas complexos.
+
+Trabalho principalmente com aplicações web, APIs, integrações entre sistemas e automações. Gosto de construir software com clareza, responsabilidade e foco em produto — não apenas código funcionando, mas código que seja fácil de manter, evoluir e entender.
 
 ---
 
-## ✨ Sobre Mim
+## ✨ Sobre mim
 
-Sou um **Desenvolvedor de Sistemas** formado em 2024, com experiência prática desde fevereiro de 2023. Minha trajetória no desenvolvimento Web inclui PHP e JavaScript, com um foco especial na criação de aplicações web robustas e APIs RESTful.
+Sou **Desenvolvedor de Sistemas**, formado em 2024, atuando profissionalmente desde fevereiro de 2023.
 
-🔧 **Experiência**: Desenvolvimento de aplicações web e criação de APIs, utilizando principalmente **JavaScript** e **PHP**.
+Minha experiência passa por desenvolvimento web, criação de APIs REST, integrações com sistemas externos, automações de processos e evolução de produtos SaaS. Tenho bastante interesse por arquitetura, qualidade de código, documentação técnica e uso de IA como apoio no processo de desenvolvimento.
 
-💡 **Perfil**: Resolutivo e ávido por desafios, busco constantemente aprimorar minhas habilidades e me manter atualizado com as últimas tendências em desenvolvimento. 
+No dia a dia, gosto de trabalhar próximo do problema real: entender a regra de negócio, transformar requisitos em soluções práticas e entregar melhorias que façam sentido para o usuário final.
 
-🤝 **Colaboração**: Valorizo ambientes colaborativos, onde a comunicação eficaz e o trabalho em equipe são essenciais para atingir objetivos. Estou sempre aberto a aprender com os colegas e a compartilhar conhecimento.
+---
+
+## 🚀 Áreas que mais estudo e trabalho
+
+- Desenvolvimento Full-Stack
+- APIs RESTful
+- Integrações com CRMs, ERPs, gateways e sistemas externos
+- Automações com ferramentas como n8n
+- Refatoração e melhoria contínua de código
+- Testes, documentação e revisão técnica
+- Interfaces web com foco em usabilidade
+- IA aplicada ao fluxo de desenvolvimento
+
+---
 
 ## 🛠️ Tecnologias e Ferramentas
 
-- **Linguagem:** PHP 8.1, JavaScript
-- **Frameworks e Bibliotecas**: Laravel, Next.js
-- **Banco de Dados**: MySQL
-- **Orquestração de Contêineres**: Docker e Docker Compose
-- **Ambiente de Desenvolvimento**: VS Code
+### Back-end
+- PHP
+- Laravel
+- JavaScript / TypeScript
+- Node.js
+- Meteor.js
+- APIs REST
 
-<div style="display: inline_block">
-  <img align="center" alt="HTML5" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
-  <img align="center" alt="CSS3" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-  <img align="center" alt="JavaScript" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-  <img align="center" alt="PHP" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg">
-  <img align="center" alt="Laravel" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain.svg">
-  <img align="center" alt="Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
-  <img align="center" alt="Next.js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original-wordmark.svg">
-</div>
+### Front-end
+- React
+- Next.js
+- Vue.js
+- HTML
+- CSS
+- Tailwind CSS
+
+### Banco de Dados
+- MySQL
+- MongoDB
+
+### DevOps e Ferramentas
+- Docker
+- Docker Compose
+- Git
+- GitHub
+- Bitbucket
+- VS Code
+- n8n
+- Postman / Insomnia
+
+---
+
+## 🧠 Como gosto de trabalhar
+
+- Código simples antes de código “esperto”
+- Boas abstrações, mas sem complicar cedo demais
+- Documentação útil e objetiva
+- Commits e tarefas bem descritos
+- Revisão de código com olhar crítico
+- Entrega contínua e evolução incremental
+- Foco em resolver o problema certo
+
+---
+
+## 📌 Atualmente me interesso por
+
+- Arquitetura de aplicações web
+- Integrações entre produtos
+- Sistemas multi-tenant
+- Automação de fluxos operacionais
+- Testes de APIs
+- Design de interfaces administrativas
+- Ferramentas de IA para produtividade de desenvolvimento
+- Me aventurando no desenvolvimento Mobile
+
+---
 
 ## 📊 Estatísticas do GitHub
 
@@ -42,10 +97,18 @@ Sou um **Desenvolvedor de Sistemas** formado em 2024, com experiência prática 
   </a>
 </div>
 
-## 🌐 Conecte-se Comigo
+---
+
+## 🌐 Conecte-se comigo
 
 <div>
-  <a href="https://www.instagram.com/brunofranci0/" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
-  <a href="mailto:brunofrancio@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
-  <a href="https://www.linkedin.com/in/bruno-francio-de-quadros-2b72a7233" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+  <a href="mailto:brunofrancio@gmail.com">
+    <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank">
+  </a>
+  <a href="https://www.linkedin.com/in/bruno-francio-de-quadros-2b72a7233" target="_blank">
+    <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank">
+  </a>
+  <a href="https://www.instagram.com/brunofranci0/" target="_blank">
+    <img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank">
+  </a>
 </div>
