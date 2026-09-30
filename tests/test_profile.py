@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from profile import parse_contributions
+from profile import parse_contributions, render_tech_carousel
 
 
 class ContributionsTest(unittest.TestCase):
@@ -24,6 +24,12 @@ class ContributionsTest(unittest.TestCase):
     def test_rejects_error_pages(self):
         with self.assertRaises(ValueError):
             parse_contributions('<html>Too many requests</html>')
+
+    def test_technology_carousel_contains_groups_and_reduced_motion_fallback(self):
+        svg = render_tech_carousel()
+        for value in ('Back-end', 'Front-end', 'Dados &amp; automação', 'PHP', 'React', 'n8n'):
+            self.assertIn(value, svg)
+        self.assertIn('prefers-reduced-motion', svg)
 
 
 if __name__ == '__main__':

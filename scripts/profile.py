@@ -76,18 +76,38 @@ def render_info():
     lines = [f'<g class="line" style="animation-delay:{.28+i*.13:.2f}s"><text class="key" x="30" y="{88+i*35}">{xml(k)}</text><text x="145" y="{88+i*35}">{xml(v)}</text></g>' for i,(k,v) in enumerate(rows)]
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="500" height="330" viewBox="0 0 500 330" role="img" aria-label="Sobre Bruno Francio"><style>text{{font:15px ui-monospace,SFMono-Regular,Consolas,monospace;fill:{TEXT}}}.prompt,.key{{fill:{GREEN}}}.muted{{fill:{MUTED}}}.line{{opacity:0;transform:translateX(-8px);animation:enter .4s ease forwards}}.cursor{{animation:blink 1s steps(1) infinite}}@keyframes enter{{to{{opacity:1;transform:none}}}}@keyframes blink{{50%{{opacity:0}}}}@media(prefers-reduced-motion:reduce){{.line{{opacity:1;transform:none;animation:none}}.cursor{{animation:none}}}}</style><rect width="500" height="330" rx="12" fill="{BG}" stroke="#30363d"/><circle cx="22" cy="22" r="6" fill="#ff5f56"/><circle cx="42" cy="22" r="6" fill="#ffbd2e"/><circle cx="62" cy="22" r="6" fill="#27c93f"/><text class="muted" x="190" y="27">bruno@github</text><text class="prompt" x="30" y="61">$ whoami</text>{''.join(lines)}<text class="prompt" x="30" y="306">$</text><rect class="cursor" x="49" y="293" width="9" height="16" fill="{GREEN}"/></svg>'''
 
-def render_portrait(image_bytes):
-    from io import BytesIO
-    from PIL import Image, ImageEnhance, ImageOps
-    image = ImageEnhance.Contrast(ImageOps.grayscale(ImageOps.fit(Image.open(BytesIO(image_bytes)).convert("RGB"),(76,48),centering=(.5,.42)))).enhance(1.7)
-    ramp = "@%#*+=-:. "; pixels = image.load(); rows=[]
-    for y in range(image.height): rows.append("".join(ramp[min(len(ramp)-1,pixels[x,y]*len(ramp)//256)] for x in range(image.width)).rstrip())
-    lines = [f'<text class="row" x="18" y="{28+i*5.9:.1f}" style="animation-delay:{i*.025:.3f}s">{xml(row)}</text>' for i,row in enumerate(rows)]
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="340" height="330" viewBox="0 0 340 330" role="img" aria-label="Retrato em ASCII de Bruno Francio"><style>.row{{font:5.7px ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre;fill:{TEXT};opacity:0;animation:type .25s ease forwards}}@keyframes type{{to{{opacity:1}}}}@media(prefers-reduced-motion:reduce){{.row{{opacity:1;animation:none}}}}</style><rect width="340" height="330" rx="12" fill="{BG}" stroke="#30363d"/>{''.join(lines)}</svg>'''
+def render_tech_carousel():
+    groups = [
+        ("Back-end", ["PHP", "Laravel", "Node.js", "Meteor.js", "APIs REST"]),
+        ("Front-end", ["React", "Next.js", "Vue.js", "TypeScript", "Tailwind CSS"]),
+        ("Dados & automação", ["MySQL", "MongoDB", "Docker", "n8n", "Git & GitHub"]),
+    ]
+    panels = []
+    for index, (title, technologies) in enumerate(groups):
+        chips = []
+        for item_index, technology in enumerate(technologies):
+            column, row = item_index % 2, item_index // 2
+            x, y = 24 + column * 148, 112 + row * 58
+            width = 136 if column == 0 else 124
+            chips.append(
+                f'<g><rect x="{x}" y="{y}" width="{width}" height="38" rx="8" '
+                f'fill="#161b22" stroke="#30363d"/><text class="tech" x="{x + 12}" '
+                f'y="{y + 24}">{xml(technology)}</text></g>'
+            )
+        panels.append(
+            f'<g class="panel panel-{index}"><text class="counter" x="24" y="66">'
+            f'0{index + 1} / 03</text><text class="title" x="24" y="94">{xml(title)}</text>'
+            f'{"".join(chips)}</g>'
+        )
+    dots = ''.join(
+        f'<circle class="dot dot-{index}" cx="{148 + index * 22}" cy="300" r="4"/>'
+        for index in range(3)
+    )
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="340" height="330" viewBox="0 0 340 330" role="img" aria-label="Carrossel de tecnologias usadas por Bruno Francio"><style>text{{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}}.label{{font-size:12px;fill:{MUTED}}}.counter{{font-size:12px;fill:{GREEN}}}.title{{font-size:20px;font-weight:700;fill:{TEXT}}}.tech{{font-size:13px;fill:{TEXT}}}.panel{{opacity:0;animation:slide 12s ease-in-out infinite}}.panel-1{{animation-delay:-8s}}.panel-2{{animation-delay:-4s}}.dot{{fill:#30363d;animation:dot 12s steps(1) infinite}}.dot-1{{animation-delay:-8s}}.dot-2{{animation-delay:-4s}}@keyframes slide{{0%,27%{{opacity:1;transform:translateX(0)}}30%{{opacity:0;transform:translateX(-12px)}}31%,96%{{opacity:0;transform:translateX(12px)}}100%{{opacity:1;transform:translateX(0)}}}}@keyframes dot{{0%,27%{{fill:{GREEN}}}28%,100%{{fill:#30363d}}}}@media(prefers-reduced-motion:reduce){{.panel,.dot{{animation:none}}.panel{{opacity:0}}.panel-0{{opacity:1}}.dot-0{{fill:{GREEN}}}}}</style><rect width="340" height="330" rx="12" fill="{BG}" stroke="#30363d"/><text class="label" x="24" y="28">stack --rotate</text><path d="M24 42H316" stroke="#30363d"/>{''.join(panels)}{dots}</svg>'''
 
 def main():
     parser=argparse.ArgumentParser(); parser.add_argument("--contributions-only",action="store_true"); args=parser.parse_args()
     days=fetch_contributions(); write("assets/contrib-heatmap.svg",render_heatmap(days))
     if not args.contributions_only:
-        write("assets/info-card.svg",render_info()); write("assets/bruno-ascii.svg",render_portrait(fetch("https://avatars.githubusercontent.com/u/107445598?v=4&size=460")))
+        write("assets/info-card.svg",render_info()); write("assets/tech-carousel.svg",render_tech_carousel())
 if __name__ == "__main__": main()

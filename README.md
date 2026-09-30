@@ -8,7 +8,7 @@
 
 ### `bruno@github ~ $ whoami`
 
-<table><tr><td valign="top"><img src="./assets/bruno-ascii.svg" width="340" alt="Retrato em ASCII de Bruno Francio" /></td><td valign="top"><img src="./assets/info-card.svg" width="500" alt="Apresentação profissional de Bruno Francio" /></td></tr></table>
+<table><tr><td valign="top"><img src="./assets/tech-carousel.svg" width="340" alt="Carrossel animado de tecnologias usadas por Bruno Francio" /></td><td valign="top"><img src="./assets/info-card.svg" width="500" alt="Apresentação profissional de Bruno Francio" /></td></tr></table>
 
 <br>
 
